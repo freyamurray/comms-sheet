@@ -90,6 +90,23 @@ h2, h3 {
     margin-top: -2rem;
 }
 
+.button {
+    font-family: pixel;
+    font-size: 1.5rem;
+    background-color: var(--box-bg);
+    color: var(--text);
+    transition-duration: .2s;
+    border: solid var(--text);
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--text);
+    color: var(--box-bg);
+    text-decoration: underline dotted;
+}
+
 .rules-content {
     display: flex;
     flex-direction: row;
