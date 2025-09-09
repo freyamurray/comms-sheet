@@ -1,0 +1,154 @@
+:root {
+    --bg: rgb(181, 231, 253);
+    --box-bg: rgb(234, 248, 255);
+    --text: rgb(42, 42, 103);
+    --shadow: rgba(67, 67, 104, 0.77);
+}
+
+@font-face {
+    font-family: pixel;
+    src: url('fonts/PixelOperator.ttf');
+}
+
+body {
+    font-family: pixel;
+    background-color: var(--bg);
+    width: 98vw;
+    color: var(--text);
+}
+
+header {
+    margin: 2rem 0 0 0;
+    display: flex;
+    text-align: center;
+    font-size: xx-large;
+}
+
+h1  {
+    margin: auto;
+}
+
+h2, h3 {
+    text-decoration:overline;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+}
+
+.box {
+    background-color: var(--box-bg);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    flex-basis: 1;
+    filter: drop-shadow(.5rem .5rem 0rem var(--shadow));
+}
+
+.box#blurb {
+    flex-wrap: wrap;
+}
+
+.box#examples {
+    flex-grow: 0;
+    flex-wrap: nowrap;
+}
+
+.box#rules {
+    flex-wrap: wrap;
+}
+
+.eg-pics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content:space-evenly;
+}
+
+.carousel {
+    display: flex;
+    width: 12rem;
+    height: 16.5rem;
+    overflow: auto;
+    margin: auto;
+    border-radius: 2rem 2rem 0 0 ;
+    border: var(--shadow) .1rem dotted;
+}
+
+.price-text {
+    padding: 0 1rem 1rem 1rem;
+    background-color: #ffff;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 0 0 2rem 2rem;
+    border: var(--shadow) .1rem dotted;
+}
+
+.price-blurb {
+    margin-top: -2rem;
+}
+
+.button {
+    font-family: pixel;
+    font-size: 1.5rem;
+    background-color: var(--box-bg);
+    color: var(--text);
+    transition-duration: .2s;
+    border: solid var(--text);
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--text);
+    color: var(--box-bg);
+    text-decoration: underline dotted;
+}
+
+.rules-content {
+    display: flex;
+    flex-direction: row;
+    overflow-wrap: break-word;
+    gap: 1.5rem;
+}
+
+
+.rule-list#rule-list-yes {
+    list-style-type: "♡ ";
+}
+
+.rule-list#rule-list-no {
+    list-style-type: "╬ ";
+}
+
+.rule-list#refuse {
+    list-style-type: ".ᐟ  ";
+}
+
+.sub-list {
+    list-style:disc;
+}
+
+
+
+@media (min-width: 1300px) {
+    
+        .wrapper {
+        flex-direction: row;
+    }
+
+    .rules-content {
+        max-width: 17rem;
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .rules-content {
+        flex-direction: column;
+        gap: 0;
+    }
+}
